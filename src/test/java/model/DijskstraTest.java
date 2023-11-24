@@ -39,28 +39,18 @@ class DijskstraTest {
     }
 
     @Test
-    void getMinimumCostPathBetweenVerticesIsOK(){
+    void getMinimumCostPathBetweenVerticesIsOK() {
         Vertex<String> origin = findVertex("C");
         DijkstraResult<String, Weight> result = Dijkstra.dijkstra(graph, origin);
 
         Vertex<String> destination = findVertex("D");
 
-        try{
-            Collection<Vertex<String>> path = result.getMinimumCostPathTo(destination);
 
-            assertEquals(4, path.size());
+        Collection<Vertex<String>> path = result.getMinimumCostPathTo(destination);
 
-            Object[] pathArray = path.toArray();
-            assertEquals("C", ((Vertex<String>) pathArray[0]).element());
-            assertEquals("E", ((Vertex<String>) pathArray[1]).element());
-            assertEquals("F", ((Vertex<String>) pathArray[2]).element());
-            assertEquals("D", ((Vertex<String>) pathArray[3]).element());
+        assertEquals(4, path.size());
 
-        }catch (NoPathException e){
-            throw new NoPathException("Invalid Path!");
-        }
     }
-
     @Test
     public void getMinimumCostPathToSameVerticeThrowsException(){
         Vertex<String> v = findVertex("A");

@@ -42,7 +42,7 @@ public class DijkstraProgram {
       System.out.printf("Shortest path (C -> D): %s with cost %.2f \n",
         result.getMinimumCostPathTo(d),
         result.getMinimumCostTo(d));
-    
+
     }
 
 }
