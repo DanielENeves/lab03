@@ -29,7 +29,7 @@ public class DijkstraProgram {
       graph.insertEdge(e, f, new Weight("E-F",6));
 
       System.out.println(graph);
-      /*
+
       DijkstraResult<String, Weight> result = dijkstra(graph, c);
       System.out.println(result);
       System.out.printf("Minimum cost path (C -> D): %s with cost %.2f \n",
@@ -42,7 +42,7 @@ public class DijkstraProgram {
       System.out.printf("Shortest path (C -> D): %s with cost %.2f \n",
         result.getMinimumCostPathTo(d),
         result.getMinimumCostTo(d));
-    */
+    
     }
 
 }
