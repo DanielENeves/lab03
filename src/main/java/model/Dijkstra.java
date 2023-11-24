@@ -16,7 +16,7 @@ public class Dijkstra {
 
     // TODO: implement algorithm. Note: Init costs with Double.MAX_VALUE
     // Step 1. Start iterating the vertices list and filling the cost, predecessors and unvisited structures.
-
+    private static final double INFINITY = MAX_VALUE;
     // Step 2. Add origin with a cost of zero
 
     // Step 3. Iterate all unvisited vertices and apply the algorithm presented at TP class
